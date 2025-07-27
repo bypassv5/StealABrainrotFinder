@@ -92,6 +92,7 @@ local Tab = Window:CreateTab("Main")
 
 Tab:CreateInput({
     Name = "Webhook URL (optional)",
+    Flag = "Webhook",
     PlaceholderText = "Defaults to rare ping only",
     RemoveTextAfterFocusLost = false,
     Callback = function(text)
