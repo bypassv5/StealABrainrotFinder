@@ -1,4 +1,4 @@
-local scriptURL = "https://raw.githubusercontent.com/bypassv5/StealABrainrotFinder/refs/heads/main/main.lua"
+local scriptURL = "https://raw.githubusercontent.com/bypassv5/SabChecker/refs/heads/main/script.lua"
 if queue_on_teleport then
     queue_on_teleport("loadstring(game:HttpGet('"..scriptURL.."'))()")
 end
@@ -51,7 +51,7 @@ local PingBrainrots = {
     ["La Vacca Saturno Saturnita"] = true,
     ["Graipuss Medussi"] = true,
     ["La Grande Combinasion"] = true,
-    ["Los Tralaleritos"] = true
+    ["Los Tralaleritos"] = true,
     ["Chimpanzini Spiderini"] = true,
     ["Las Tralaleritas"] = true,
     ["Las Vaquitas Saturnitas"] = true,
@@ -122,7 +122,7 @@ local hoppingToggle = Tab:CreateToggle({
 
 local function scanModels()
     local found = {}
-    for _, name in ipairs(modelsToCheck) do
+    for _, name in ipairs(BrainrotsToCheck) do
         if workspace:FindFirstChild(name) then
             table.insert(found, name)
         end
@@ -136,7 +136,7 @@ local function sendWebhook(foundModels)
 
     local pingEveryone = false
     for _, name in ipairs(foundModels) do
-        if pingModels[name] then
+        if PingBrainrots[name] then
             pingEveryone = true
             break
         end
