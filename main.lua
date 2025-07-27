@@ -1,4 +1,4 @@
-local scriptURL = "https://raw.githubusercontent.com/bypassv5/StealABrainrptFinder/refs/heads/main/main.lua"
+local scriptURL = "https://raw.githubusercontent.com/bypassv5/StealABrainrotFinder/refs/heads/main/main.lua"
 if queue_on_teleport then
     queue_on_teleport("loadstring(game:HttpGet('"..scriptURL.."'))()")
 end
