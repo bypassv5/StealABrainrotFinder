@@ -94,7 +94,7 @@ Tab:CreateInput({
     Name = "Webhook URL (optional)",
     PlaceholderText = "Defaults to rare ping only",
     RemoveTextAfterFocusLost = false,
-    OnChanged = function(text)
+    Callback = function(text)
         webhookURL = text
     end
 })
